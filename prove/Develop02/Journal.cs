@@ -14,7 +14,7 @@ class Journal
     public string PullPrompt()
     {
         Random random = new Random();
-        int randomNumber = random.Next(3);
+        int randomNumber = random.Next(5);
         string randomPrompt = _prompts[randomNumber];
         return randomPrompt;
     }

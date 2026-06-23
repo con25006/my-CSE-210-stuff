@@ -2,9 +2,6 @@ using System.Dynamic;
 using System.Globalization;
 
 class Fraction
-
-
-
 {
     // attributes
     private int _top;
@@ -42,7 +39,12 @@ class Fraction
     }
     public void SetBottom(int bottom)
     {
-        _bottom = bottom;
+        if (bottom != 0)
+        {
+            _bottom = bottom;
+        }
+        else bottom = 1;
+        
     }
 
     // the other two
