@@ -1,19 +1,21 @@
 class Activity
 {
     // common attributes
-    private double _distance; // in km
-    private double _speed; // in km/h
-    private double _pace; // in min/km
+    protected double _distance; // in km
+    protected double _speed; // in km/h
+    protected double _pace; // in min/km
+    protected string _date;
+    protected double _time; // in min
+    
 
-    // common methods
-    public string GetSummary()
+    // methods
+    public virtual string GetSummary()
     {
-        return "";
+        return $"{_date} Activity ({_time} min): Distance {_distance} km, Speed: {_speed} kph, Pace: {_pace} min per km";
     }
-    public Activity(double distance, double speed, double pace)
+    public Activity(string date, double time)
     {
-        _distance = distance;
-        _speed = speed;
-        _pace = pace;
+        _date = date;
+        _time = time;
     }
 }
